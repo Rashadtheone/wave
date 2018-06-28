@@ -1,5 +1,5 @@
 # The SoundCloud Client in React + Redux
-## TRUMPF
+## TRUMPF tutorial  
 
 # TECHNOLOGIES
 - React
