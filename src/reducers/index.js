@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
+import {routerReducer} from 'react-router-redux';
 import track from './tracks';
 
 export default combineReducers({
-    track
+    track,
+    routing: routerReducer
 })
 
 //creates combinerecords allows us to use multiple reducers without continuesly changing the global state

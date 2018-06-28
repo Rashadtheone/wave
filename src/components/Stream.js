@@ -1,5 +1,7 @@
 import React from 'react';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux'
+import * as actions from '../actions'
 
 function Stream({ tracks = [] }) {
   return (
@@ -16,13 +18,17 @@ function Stream({ tracks = [] }) {
 //identify redux as a supplier for data for use. while the component doesn't change at all.
 //mapStateToProps returns a substate of our global scope supplying only the data this component needs
 //we can access different properties of the global scope using <Stream something={thing} />
-function mapStatetoProps(state) {
+function mapStateToProps(state) {
     const tracks = state.track;
     return {
         tracks
     }
 }
-
-export default connect(mapStatetoProps)(Stream);
+function mapDispatchToProps(dispatch) {
+    return {
+        onAuth: bindActionCreators(actions.auth, dispatch)
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Stream);
 
 //stateless component doesn't have any lifecycle methods, just shows data.
