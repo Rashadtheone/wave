@@ -1,14 +1,6 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-// import App from './App';
-// import registerServiceWorker from './registerServiceWorker';
-
-// ReactDOM.render(<App />, document.getElementById('root'));
-// registerServiceWorker();
-
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
 import configureStore from './stores/configureStore';
 import * as actions from './actions';
 import Stream from './components/Stream';
@@ -25,9 +17,11 @@ const tracks = [
 //Holds global state
 const store = configureStore();
 store.dispatch(actions.setTracks(tracks));
-
+//adding the provider connects react and redux to one another
 ReactDOM.render(
-  <Stream />,
+    <Provider store={store}>
+    <Stream />
+  </Provider>,
   document.getElementById('root')
 );
 
