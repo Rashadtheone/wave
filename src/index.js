@@ -8,12 +8,12 @@ import {Provider} from 'react-redux';
 import configureStore from './stores/configureStore';
 import * as actions from './actions';
 import { CLIENT_ID, REDIRECT_URI } from './constants/auth'
-
+import Routes from './routes/routes';
 
 //ACCES TO SOUNDCLOUD
 SC.initialize({ client_id: CLIENT_ID, redirect_uri: REDIRECT_URI})
 
-const history = syncHistoryWithStore(Router, store);
+const history = syncHistoryWithStore(Routes, store);
 
 const tracks = [
   {
