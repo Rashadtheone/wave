@@ -1,1 +1,4 @@
-// Constants will retun an object with a type and a payload, the payload canbe anything which will be used to change the global state.
+
+// constants will be where we define action(change) in the gloabl state. 
+
+export const TRACKS_SET = 'TRACK_SET';
