@@ -1,4 +1,4 @@
-import {setTracks} from './track';
+import { setTracks } from './track';
 
 export {
     setTracks
