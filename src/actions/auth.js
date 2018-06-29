@@ -9,7 +9,7 @@ export function auth() {
 function fetchMe(session) {
     //ccreating soundcloud authetication
     fetch(`//api.soundcloud.com/me?oauth_token=${session.oauth_token}`)
-        .then((response) => response.json()
+        .then((response) => response.json())
         .then((data) => {
             console.log(data)
         })

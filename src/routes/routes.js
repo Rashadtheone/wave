@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import SC from 'soundcloud';
 import App from '../components/App/index';
 import Callback from '../components/Callback';
