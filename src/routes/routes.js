@@ -8,6 +8,8 @@ import { CLIENT_ID, REDIRECT_URI } from '../constants/auth';
 
 SC.initialize({ client_id: CLIENT_ID, redirect_uri: REDIRECT_URI });
 
+
+
 class Routes extends Component {
     render() {
       return (
