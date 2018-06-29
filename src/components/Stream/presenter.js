@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Stream({ tracks = [] }) {
+function Stream ({ tracks = [], onAuth }) {
     return (
         <div>
             <div>
@@ -10,7 +10,7 @@ function Stream({ tracks = [] }) {
             <div>
             {
                 tracks.map((track, key) => {
-                    return <div className="track "key={key}>{track.title}></div>
+                    return <div className="track" key={key}>{track.title}></div>
                 })
             }
             </div>

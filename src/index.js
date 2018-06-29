@@ -9,6 +9,7 @@ import * as actions from './actions';
 import { CLIENT_ID, REDIRECT_URI } from './constants/auth'
 import Routes from './routes/routes';
 
+
 //ACCES TO SOUNDCLOUD
 SC.initialize({ client_id: CLIENT_ID, redirect_uri: REDIRECT_URI})
 

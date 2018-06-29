@@ -6,7 +6,7 @@ class Callback extends React.Component {
         window.setTimeout(window.opener.SC.connectCallback, 1);
     }
     render() {
-        return <div><p>this page should clouse soon</p></div>;
+        return <div><p>this page should close soon</p></div>;
 
     }
 
