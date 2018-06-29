@@ -4,8 +4,10 @@ import Stream from './presenter';
 import * as actions from '../../actions'
 
 function mapStateToProps(state) {
-    const tracks = state.tracks
+    const { user } = state.auth
+    const tracks = state.track
     return {
+        user,
         tracks
     }
 }

@@ -13,6 +13,7 @@ export default function(state = initialState, action) {
     }
     return state;
 }
+
 function setTracks(state, action) {
     const { tracks } = action;
     return [...state, ...tracks]

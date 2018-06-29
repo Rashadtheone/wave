@@ -3,11 +3,12 @@ import rootReducer from '../reducers/index';
 import {createLogger} from 'redux-logger';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { routerMiddleware } from 'react-router-redux'
+import thunk from 'redux-thunk'
 
 const logger = createLogger();
 const router = routerMiddleware(Router);
 
-const createStoreWithMiddleware = applyMiddleware(router,logger)(createStore);
+const createStoreWithMiddleware = applyMiddleware(thunk,router,logger)(createStore);
 
 export default function configureStore(initialState) {
     return createStoreWithMiddleware(rootReducer, initialState);
